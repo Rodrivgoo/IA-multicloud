@@ -2,8 +2,8 @@ import requests
 import csv
 import time
 
-def test_model(model, prompt):
-    """Prueba un modelo con una pregunta específica"""
+def test_model(model, prompt, max_retries=3):
+    """Prueba un modelo con una pregunta específica y reintentos"""
     url = "http://localhost:11434/api/generate"
     
     payload = {
@@ -12,31 +12,54 @@ def test_model(model, prompt):
         "stream": False
     }
     
-    try:
-        start_time = time.time()
-        response = requests.post(url, json=payload, timeout=120)
-        end_time = time.time()
-        
-        if response.status_code == 200:
-            result = response.json()
+    for attempt in range(max_retries):
+        try:
+            start_time = time.time()
+            # Aumentar timeout para modelos más grandes
+            timeout = 180 if "qwen2" in model or "llama3.1" in model else 120
+            response = requests.post(url, json=payload, timeout=timeout)
+            end_time = time.time()
             
-            eval_count = result.get('eval_count', 0)
-            eval_duration = result.get('eval_duration', 0)  
-            
-            if eval_duration > 0:
-                duration_seconds = eval_duration / 1_000_000_000
-                tps = eval_count / duration_seconds if duration_seconds > 0 else 0
+            if response.status_code == 200:
+                result = response.json()
+                
+                eval_count = result.get('eval_count', 0)
+                eval_duration = result.get('eval_duration', 0)  
+                
+                if eval_duration > 0:
+                    duration_seconds = eval_duration / 1_000_000_000
+                    tps = eval_count / duration_seconds if duration_seconds > 0 else 0
+                else:
+                    duration_seconds = end_time - start_time
+                    tps = eval_count / duration_seconds if duration_seconds > 0 else 0
+                
+                return True, tps, eval_count, eval_duration, result.get('response', 'Sin respuesta')
             else:
-                duration_seconds = end_time - start_time
-                tps = eval_count / duration_seconds if duration_seconds > 0 else 0
-            
-            return True, tps, eval_count, eval_duration, result.get('response', 'Sin respuesta')
-        else:
-            return False, 0, 0, 0, ''
-            
-    except Exception as e:
-        print(f"❌ Error con {model}: {e}")
-        return False, 0, 0, 0, ''
+                if attempt < max_retries - 1:
+                    print(f"    ⚠️  Intento {attempt + 1} falló, reintentando...")
+                    time.sleep(2)  # Esperar antes del reintento
+                    continue
+                return False, 0, 0, 0, ''
+                
+        except requests.exceptions.Timeout:
+            if attempt < max_retries - 1:
+                print(f"    ⚠️  Timeout en intento {attempt + 1}, reintentando...")
+                time.sleep(5)  # Esperar más tiempo antes del reintento
+                continue
+            else:
+                print(f"    ❌ Timeout después de {max_retries} intentos")
+                return False, 0, 0, 0, ''
+                
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f"    ⚠️  Error en intento {attempt + 1}: {e}, reintentando...")
+                time.sleep(2)
+                continue
+            else:
+                print(f"    ❌ Error después de {max_retries} intentos: {e}")
+                return False, 0, 0, 0, ''
+    
+    return False, 0, 0, 0, ''
 
 def main():
     print("🤖 EVALUADOR DE MODELOS LLM LOCALES")
@@ -80,6 +103,8 @@ def main():
     print(f"\n📋 Configuración:")
     print(f"   🎯 Modelos a evaluar: {len(models)}")
     print(f"   📝 Preguntas: {len(questions)}")
+    print(f"   🔄 Reintentos automáticos: 3")
+    print(f"   ⏱️  Timeout: 180s para qwen2/llama3.1, 120s para otros")
     
     # Preguntar si continuar
     response = input("\n¿Continuar con la evaluación? (s/n): ").lower().strip()

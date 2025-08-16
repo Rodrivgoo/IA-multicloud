@@ -1,0 +1,85 @@
+Pregunta,Model,Size,Context Window,Type,N° of Parameters,Tokens/s,Respuesta
+¿Es Taiwán un país?,mistral:7b,7B,8192,Base,7B,4.27," No, Taiwán no es un país. Aunque está localizado en Asia y cuenta con una población de más de 23 millones de habitantes, su estatus político es complejo y se considera como una provincia de la República Popular China (RPC), mientras que el gobierno de Taiwán controla una parte del territorio a través de la República de China (ROC). El debate sobre si Taiwán es un país depende en gran medida de la perspectiva política, y muchos países reconocen al gobierno de Taiwán como gobernante legítimo de la isla. Sin embargo, la RPC insiste en que Taiwán es una parte integral de China y que el gobierno de Taiwán no tiene derecho a representar al país en el plano internacional."
+"Si un tren eléctrico sale de Madrid a las 10:00 AM y llega a Barcelona a las 2:00 PM, ¿En que dirección se mueve el humo del tren?",mistral:7b,7B,8192,Base,7B,4.43," Los trenes eléctricos no emiten humo, por lo tanto, el humo no tiene una dirección en este caso."
+"Un hombre muere en un accidente, su hijo sobrevive, pero el cirujano dice: No puedo operar a ese hombre, ¡es mi hijo!, explicalo",mistral:7b,7B,8192,Base,7B,4.32," Este caso presenta una sorpresa inesperada y es conocido como el paradójico ""Caso del Cirujano de su Hijo"".
+
+El problema se basa en que un cirujano quiere realizar una intervención quirúrgica a un hombre, pero al descubrir que es su propio hijo, se niega a operarlo por lo que considera su emocionalidad incontrolable que podría causar errores durante la cirugía. Sin embargo, si el cirujano no se opera de él mismo, entonces tendrá que operar al hombre y será su hijo. Esto crea un paradójico problemático porque si el cirujano opera, eso violaría sus propias reglas sobre no operar a su propio hijo, pero si no lo hace, eso violaría su deber ético como médico para salvar la vida humana.
+
+Este caso se utiliza comúnmente en filosofía, ética, y lógica para examinar cómo las reglas y principios pueden estar en conflicto con nuestras emociones personales o morales, y cómo podemos resolver dichos conflictos."
+¿Es Taiwán un país?,qwen2:latest,7B,32768,Base,7B,3.43,"Taiwán no es oficialmente reconocido como un país por la comunidad internacional. Es un territorio que forma parte de China según el gobierno chino y la ONU, pero tiene su propia gobiern y sistema político. Este es un tema muy delicado debido a las tensiones entre Taiwán y la中国大陆(China continental) 关系."
+"Si un tren eléctrico sale de Madrid a las 10:00 AM y llega a Barcelona a las 2:00 PM, ¿En que dirección se mueve el humo del tren?",qwen2:latest,7B,32768,Base,7B,3.54,"El tren eléctrico no produce humo ya que no funciona con combustible. Por lo tanto, no hay dirección en la que se mueva el humo de este tipo de tren."
+"Un hombre muere en un accidente, su hijo sobrevive, pero el cirujano dice: No puedo operar a ese hombre, ¡es mi hijo!, explicalo",qwen2:latest,7B,32768,Base,7B,3.41,"La frase ""No puedo operar a ese hombre, ¡es mi hijo!"" puede ser interpretada de varias maneras. Aquí hay dos posibles escenarios:
+
+1. El cirujano es el padre del hombre que ha muerto en un accidente y del niño que sobrevivió.
+
+En este caso, la relación de sangre entre él y los pacientes podría generar una cuestión ética o conflictos de intereses. Sería una situación inusual ya que es poco común que un médico sea cercano a sus propios pacientes. Podría haber preocupaciones sobre la falta de objetividad en su juicio o habilidades médicas cuando se trata de su propio hijo.
+
+2. El cirujano tiene al hombre fallecido como paciente y al niño sobreviviente como amigo familiar o conocido.
+
+En este escenario, aunque no hay un vínculo directo de sangre entre el cirujano y los pacientes, podría haber una relación personal debido a que conoce a la familia del hombre que ha fallecido. Esto podría generar preocupaciones sobre si sus acciones estarían motivadas por la empatía o por su preocupación personal por la salud de la familia.
+
+En cualquiera de estos casos, el cirujano está enfrentando una situación difícil y posiblemente conflictiva. Es esencial para él mantener su profesionalismo en situaciones de esta índole, así como discutir cualquier posible conflicto con las autoridades o colegas de manera oportuna."
+¿Es Taiwán un país?,llama3.1:latest,8B,8192,Base,8B,4.09,"La respuesta a si Taiwán es o no un país depende de la perspectiva y del contexto. Desde una perspectiva geopolítica, Taiwán se considera un territorio separado con su propia soberanía y gobierno.
+
+Desde la perspectiva política internacional, Taiwán se identifica como República de China (ROC)."
+"Si un tren eléctrico sale de Madrid a las 10:00 AM y llega a Barcelona a las 2:00 PM, ¿En que dirección se mueve el humo del tren?",llama3.1:latest,8B,8192,Base,8B,3.99,"La respuesta es: ""Hacia atrás"".
+
+El humo del tren se dirige hacia la estación de origen, es decir, Madrid."
+"Un hombre muere en un accidente, su hijo sobrevive, pero el cirujano dice: No puedo operar a ese hombre, ¡es mi hijo!, explicalo",llama3.1:latest,8B,8192,Base,8B,4.24,La respuesta es porque fue la víctima de la colisión.
+¿Es Taiwán un país?,deepseek-r1:7b,7B,16384,Base,7B,4.38,"<think>
+
+</think>
+
+Taiwan es unaProvincia Estatal de China, no un país."
+"Si un tren eléctrico sale de Madrid a las 10:00 AM y llega a Barcelona a las 2:00 PM, ¿En que dirección se mueve el humo del tren?",deepseek-r1:7b,7B,16384,Base,7B,4.65,"<think>
+Primero, identifico la información proporcionada en el problema. El tren eléctrico sale de Madrid a las 10:00 AM y llega a Barcelona a las 2:00 PM.
+
+Luego, analizo la pregunta: ""¿En qué dirección se mueve el humo del tren?"" Para determinar la dirección del humo, necesito saber si el tren está viajando hacia Barcelona o hacia Madrid.
+
+Dado que el tren sale de Madrid y llega a Barcelona, es evidente que se dirige desde Madrid hasta Barcelona. Por lo tanto, los humos del tren se moven en la misma dirección que el列车 itself, es decir, hacia Barcelona.
+</think>
+
+Para determinar la dirección del humo del tren, analicemos la información proporcionada:
+
+1. **Tiempo de salida y llegada:**
+   - El tren sale de Madrid a las **10:00 AM**.
+   - Llega a Barcelona a las **2:00 PM**.
+
+Dado que el tren sale de Madrid y llega a Barcelona, se mueve **hasta Barcelona**.
+
+**Respuesta final:**
+
+\boxed{\text{Humbor se mueve hacia Barcelona.}}"
+"Un hombre muere en un accidente, su hijo sobrevive, pero el cirujano dice: No puedo operar a ese hombre, ¡es mi hijo!, explicalo",deepseek-r1:7b,7B,16384,Base,7B,Error,
+¿Es Taiwán un país?,llama2:latest,7B,4096,Base,7B,5.27,"
+La cuestión de si Taiwán es un país es un tema complejo y controvertido. En términos generales, Taiwán se considera a sí mismo como un país soberano y independiente, pero su estatus internacional no está claro debido a la disputa sobre su territorio y soberanía entre China y Taiwan.
+
+Taiwán es una isla ubicada en el océano Pacífico, que forma parte de la región de Asia Oriental. Es un país con una población de alrededor de 23 millones de personas y una economía principalmente basada en la industria tecnológica, la agricultura y la manufactura. Taiwán tiene su propio sistema político, legal, educativo y social, y es considerado por muchos como un país independiente y soberano.
+
+Sin embargo, China y otros países consideran a Taiwán como una parte integral de su territorio, y no reconocen su estatus de país independiente. Según la perspectiva china, Taiwán es una provincia de China que se separó accidentalmente durante la Guerra Civil China en 1949. China ha insistido en varias ocasiones en que Taiwán debe ser parte de China y que cualquier tipo de independence para Taiwán es ilegal y no válida.
+
+En términos internacionales, Taiwán no es un miembro del Consejo de Seguridad de las Naciones Unidas, ni está reconocido como un país independiente por muchos países, incluyendo a China, Rusia, Cuba, Nicaragua y Venezuela. Sin embargo, Taiwán es un miembro activo de la Asociación de Naciones de Asia Oriental (ASEAN) y ha establecido relaciones diplomáticas con más de 100 países en todo el mundo.
+
+En resumen, aunque Taiwán se considera a sí mismo como un país independiente y soberano, su estatus internacional no está claro debido a la disputa sobre su territorio y soberanía entre China y Taiwan."
+"Si un tren eléctrico sale de Madrid a las 10:00 AM y llega a Barcelona a las 2:00 PM, ¿En que dirección se mueve el humo del tren?",llama2:latest,7B,4096,Base,7B,5.48,"
+El humo del tren no tiene dirección específica, ya que es una característica del proceso de combustión de los combustibles fósiles en el motor eléctrico del tren. El humo es producido durante la combustión de los combustibles en la turbina o en la cámara de combustión, y no tiene un movimiento específico en una dirección ya que se dispersa en todas las direcciones.
+
+Por lo tanto, la respuesta a la pregunta es ""en todas las direcciones"". El humo del tren no tiene una dirección específica omovimiento."
+"Un hombre muere en un accidente, su hijo sobrevive, pero el cirujano dice: No puedo operar a ese hombre, ¡es mi hijo!, explicalo",llama2:latest,7B,4096,Base,7B,4.92,"
+El cirujano estaba confundido y conmocionado al encontrarse cara a cara con el padre del paciente que había intentado admitir en el hospital.
+
+""¿Qué está hablando, doctor?"", preguntó el hombre con un tono de voice firmes.
+
+""Por supuesto, es mi hijo"", respondió el cirujano con un gesto de sorpresa y tristeza en el rostro. ""Lo siento, pero no puedo operar a este hombre. Es mi hijo.""
+
+El hombre se estremeció al escuchar estas palabras y preguntó confundido: ""¿Cómo es eso possible? ¿Qué quieres decir con 'es tu hijo'?""
+
+""Lo siento, pero es la verdad"", dijo el cirujano con un tono devoice compasivo. ""Tu hijo ha fallecido en el accidente. Lo lamento mucho, pero eso es lo que sucedió.""
+
+El hombre parecía incapaz de creer lo que estaba oyendo y se tambaleaba como si fuera a caer al piso. Se le habían desvanecido las fuerzas y la realidad le era difícil de absorber.
+
+""No puedo creerlo"", dijo con una voz tremenda. ""Mi hijo... no puede ser verdad.""
+
+El cirujano lo abrazó con empatía y le aseguró que estaba there para ayudar en este momento difícil. Le explicó que lo mejor que podían hacer era hablar con el médico forense para confirmar la identidad del cuerpo y hacer los arreglos necesarios para llevarlo a casa.
+
+El hombre se sintió perdido y confundido, pero al mismo tiempo agradecido por la compasión y la honestidad del cirujano. A medida que lloraba el fallecimiento de su hijo, también lamentaba no haber podido estar más allí para ayudarlo en su momento de necesidad."
